@@ -1,12 +1,12 @@
 Summary:	Traceproto - a traceroute replacement
 Summary(pl):	Traceproto - zamiennik traceroute
 Name:		traceproto
-Version:	1.1.0
+Version:	1.1.1
 Release:	1
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/traceproto/%{name}-%{version}.tar.gz
-# Source0-md5:	265d558d8689790cdb158b7d46c88b31
+# Source0-md5:	0050c32bbeb3638732587d09eee4d218
 URL:		http://traceproto.sourceforge.net/
 BuildRequires:	libcap-devel >= 1.10
 BuildRequires:	libnet-devel >= 1.1.2.1-2

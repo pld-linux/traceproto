@@ -1,5 +1,5 @@
-Summary:	Traceproto is a traceroute replacement.
-Summary(pl):	Traceproto jest zastêpnikiem traceroute.
+Summary:	Traceproto is a traceroute replacement
+Summary(pl):	Traceproto jest zastêpnikiem traceroute
 Name:		traceproto
 Version:	0.9.2
 %define         _beta           beta0
@@ -32,19 +32,15 @@ docelowego hosta. Obs³uguje trasowanie TCP, UDP oraz ICMP.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-install %{name}.8 $RPM_BUILD_ROOT%{_mandir}/man8/%{name}.8
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/* \
-	AUTHORS ChangeLog NEWS README TODO News
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man8/*

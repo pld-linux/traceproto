@@ -1,5 +1,5 @@
-Summary:	Traceproto is a traceroute replacement
-Summary(pl):	Traceproto jest zastêpnikiem traceroute
+Summary:	Traceproto - a traceroute replacement
+Summary(pl):	Traceproto - zamiennik traceroute
 Name:		traceproto
 Version:	0.9.2
 %define         _beta           beta0
@@ -7,11 +7,11 @@ Version:	0.9.2
 Release:	0.%{_beta}.1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://dl.sourceforge.net/sourceforge/traceproto/%{name}-%{mversion}.tar.gz
+Source0:	http://dl.sourceforge.net/traceproto/%{name}-%{mversion}.tar.gz
 # Source0-md5:	2047f6802706a5c2b3ac5c93d6cb277e
 URL:		http://traceproto.sourceforge.net/index.php
-BuildRequires:	libpcap-devel >= 0.8.3-1
 BuildRequires:	libnet-devel >= 1.1.2.1-2
+BuildRequires:	libpcap-devel >= 0.8.3-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -20,11 +20,11 @@ the protocol and port to trace to. It currently supports TCP, UDP, and
 ICMP traces.
 
 %description -l pl
-Traceproto jest narzêdziam do wy¶wietlania trasy pakietów do
+Traceproto jest narzêdziem do wy¶wietlania trasy pakietów do
 docelowego hosta. Obs³uguje trasowanie TCP, UDP oraz ICMP.
 
 %prep
-%setup -q -n %{name}-%{mversion} -a 0
+%setup -q -n %{name}-%{mversion}
 
 %build
 %configure

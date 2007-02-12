@@ -1,5 +1,5 @@
 Summary:	Traceproto - a traceroute replacement
-Summary(pl):	Traceproto - zamiennik traceroute
+Summary(pl.UTF-8):   Traceproto - zamiennik traceroute
 Name:		traceproto
 Version:	1.1.1
 Release:	1
@@ -19,9 +19,9 @@ Traceproto is a traceroute replacement that allows the user to specify
 the protocol and port to trace to. It currently supports TCP, UDP, and
 ICMP traces.
 
-%description -l pl
-Traceproto jest narzêdziem do wy¶wietlania trasy pakietów do
-docelowego hosta. Obs³uguje trasowanie TCP, UDP oraz ICMP.
+%description -l pl.UTF-8
+Traceproto jest narzÄ™dziem do wyÅ›wietlania trasy pakietÃ³w do
+docelowego hosta. ObsÅ‚uguje trasowanie TCP, UDP oraz ICMP.
 
 %prep
 %setup -q

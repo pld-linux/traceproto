@@ -1,5 +1,5 @@
 Summary:	Traceproto - a traceroute replacement
-Summary(pl.UTF-8):   Traceproto - zamiennik traceroute
+Summary(pl.UTF-8):	Traceproto - zamiennik traceroute
 Name:		traceproto
 Version:	1.1.1
 Release:	1

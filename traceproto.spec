@@ -1,12 +1,13 @@
+%define		pre	beta0
 Summary:	Traceproto - a traceroute replacement
 Summary(pl.UTF-8):	Traceproto - zamiennik traceroute
 Name:		traceproto
-Version:	1.1.1
-Release:	1
+Version:	1.1.2
+Release:	0.%{pre}.1
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://dl.sourceforge.net/traceproto/%{name}-%{version}.tar.gz
-# Source0-md5:	0050c32bbeb3638732587d09eee4d218
+Source0:	http://dl.sourceforge.net/traceproto/%{name}-%{version}%{pre}.tar.gz
+# Source0-md5:	621d69c14ff69243353d743f7beb6c8f
 URL:		http://traceproto.sourceforge.net/
 BuildRequires:	libcap-devel >= 1.10
 BuildRequires:	libnet-devel >= 1.1.2.1-2
@@ -24,19 +25,19 @@ Traceproto jest narzędziem do wyświetlania trasy pakietów do
 docelowego hosta. Obsługuje trasowanie TCP, UDP oraz ICMP.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{pre}
 
 %build
-%configure
+%configure \
+	--bindir=%{_sbindir}
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sbindir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-install traceproto $RPM_BUILD_ROOT%{_sbindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
